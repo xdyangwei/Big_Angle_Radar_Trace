@@ -8,5 +8,5 @@
 /big_angle_radar/big_angle_radar/big_angle_radar.vcxproj.user
 /big_angle_radar/big_angle_radar/pch.cpp
 /big_angle_radar/big_angle_radar/pch.h
-/big_angle_radar/big_angle_radar/lib
+/big_angle_radar/big_angle_radar/sqlite3.lib
 *.exe
