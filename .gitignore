@@ -1,0 +1,12 @@
+/big_angle_radar/Debug
+/big_angle_radar/big_angle_radar.sln
+/big_angle_radar/.vs
+/big_angle_radar/big_angle_radar/Debug
+/big_angle_radar/big_angle_radar/sqlite
+/big_angle_radar/big_angle_radar/big_angle_radar.vcxproj
+/big_angle_radar/big_angle_radar/big_angle_radar.vcxproj.filters
+/big_angle_radar/big_angle_radar/big_angle_radar.vcxproj.user
+/big_angle_radar/big_angle_radar/pch.cpp
+/big_angle_radar/big_angle_radar/pch.h
+/big_angle_radar/big_angle_radar/lib
+*.exe
