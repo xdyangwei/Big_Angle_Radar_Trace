@@ -1,7 +1,8 @@
-﻿  big_angle_radar.cpp
+﻿  database.cpp
+f:\big_angle_radar_trace\big_angle_radar\big_angle_radar\database.cpp(38): warning C4477: “sprintf_s”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“double”
   正在生成代码
-  7 of 192 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    17 functions had inline decision re-evaluated but remain unchanged
+  2 of 2283 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   big_angle_radar.vcxproj -> F:\Big_Angle_Radar_Trace\big_angle_radar\x64\Release\big_angle_radar.exe
