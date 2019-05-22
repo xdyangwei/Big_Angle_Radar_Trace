@@ -1,4 +1,5 @@
 /big_angle_radar/Debug
+/big_angle_radar/x64
 /big_angle_radar/big_angle_radar.sln
 /big_angle_radar/.vs
 /big_angle_radar/big_angle_radar/Debug
@@ -10,4 +11,5 @@
 /big_angle_radar/big_angle_radar/pch.h
 /big_angle_radar/big_angle_radar/sqlite3.lib
 /big_angle_radar/big_angle_radar/x64
+
 *.exe

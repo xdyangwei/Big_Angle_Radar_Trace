@@ -41,11 +41,11 @@ void database::store(radar r)
 
 void database::store_one(radar_one r1)
 {
+	if (r1.x == 0 && r1.y == 0)
+		return ;
 	char buffer[1024];
 	char* err = 0;
-	std::cout << r1.targetid << std::endl;
 	sprintf_s(buffer,"Insert into radar_data(targetid,x,y,speed,acc) values (%f,%f,%f,%f,%f)",r1.targetid,r1.x,r1.y,r1.v,r1.acc);
-	std::cout << buffer << std::endl;
 	auto res = sqlite3_exec(db, buffer, nullptr, nullptr, &err);
 	if (res != SQLITE_OK)
 		flag = false;
