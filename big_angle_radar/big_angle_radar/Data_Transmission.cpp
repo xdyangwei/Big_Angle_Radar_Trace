@@ -9,7 +9,7 @@ Data_Transmission::Data_Transmission(short port, std::string address):
 	memset(&sockAddr, 0, sizeof(sockAddr));
 	sockAddr.sin_family = AF_INET;
 	sockAddr.sin_port = htons(port);
-	sockAddr.sin_addr.S_un.S_addr = inet_addr(address.c_str());
+	sockAddr.sin_addr.S_un.S_addr = INADDR_ANY;
 	bind(sock_listen, (SOCKADDR*)&sockAddr, sizeof(sockAddr));
 	listen(sock_listen, 5);
 	std::cout << "The server is listening connection from " <<inet_ntoa((sockAddr.sin_addr)) << " at port " << ntohs(sockAddr.sin_port) << std::endl;
@@ -40,4 +40,5 @@ Data_Transmission::~Data_Transmission()
 {
 	closesocket(sock_listen);
 	closesocket(sock_recv);
+	WSACleanup();
 }
