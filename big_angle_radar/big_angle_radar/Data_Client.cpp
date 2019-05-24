@@ -13,9 +13,7 @@ Data_Client::Data_Client(std::string ipaddr, short port):
 	sockAddr.sin_family = AF_INET;
 	std::cout << inet_ntoa(sockAddr.sin_addr) << " " << ntohs(sockAddr.sin_port) << std::endl;
 	connect(sock,(SOCKADDR*)&sockAddr,sizeof(sockAddr));
-	int len = sizeof(sock_server);
-	getpeername(sock, (SOCKADDR*)&sock_server, &len);
-	std::cout << inet_ntoa(sock_server.sin_addr) << " " << ntohs(sock_server.sin_port) << std::endl;
+	//std::cout << inet_ntoa(sockAddr.sin_addr) << " " << ntohs(sockAddr.sin_port) << std::endl;
 }
 
 bool Data_Client::init_dll()
@@ -32,6 +30,7 @@ void Data_Client::send_data()
 	memset(buffer, 0, sizeof(buffer));
 	memcpy(buffer, &data, sizeof(buffer));
 	send(sock,buffer,sizeof(buffer),0);
+	std::cout << "send data success" << std::endl;
 }
 
 Data_Client::~Data_Client()
@@ -39,3 +38,8 @@ Data_Client::~Data_Client()
 	closesocket(sock);
 	WSACleanup();
 }
+
+//int main(){
+//	Data_Client client("127.0.0.1",5100);
+//	client.send_data();
+//}

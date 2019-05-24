@@ -26,6 +26,7 @@ bool Data_Transmission::init_dll()
 void Data_Transmission::run()
 {
 	int sock_client_size = sizeof(sockAddr_client);
+	//std::cout << sock_client_size << std::endl;
 	sock_recv=accept(sock_listen, (SOCKADDR*)&sockAddr_client, &sock_client_size);
 	std::cout << "connection from " << inet_ntoa(sockAddr_client.sin_addr) << " at port " << ntohs(sockAddr_client.sin_port) << std::endl;
 	memset(buffer, 0, sizeof(buffer));
