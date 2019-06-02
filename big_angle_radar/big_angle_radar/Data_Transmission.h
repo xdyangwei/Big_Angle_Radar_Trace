@@ -6,14 +6,15 @@
 #include<iostream>
 #include<string>
 #pragma comment(lib,"ws2_32.lib")
+//the tcp server which receive data from big_angle_radar
 class Data_Transmission
 {
 	using radar_data = big_angle_radar_data;
 	using radar_one = big_angle_radar_target_info;
 public:
-	Data_Transmission(short port, std::string address="127.0.0.1");
+	Data_Transmission(short port, std::string address="127.0.0.1");//bind and listen the address and the port
 	bool init_dll();
-	void run();
+	void run();//receive radar data from socket
 	~Data_Transmission();
 private:
 	WSADATA wasData;
